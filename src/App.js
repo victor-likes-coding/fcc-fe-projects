@@ -1,24 +1,15 @@
 import { connect } from "react-redux";
-import { getQuote } from "./state/actionCreators";
 
-const App = ({ selected, getNewQuote }) => {
-  const { quote, author } = selected;
+const App = (props) => {
   return <div className="App"></div>;
 };
 
-const mapStateToProps = ({ selected }) => {
-  return {
-    selected,
-  };
+const mapStateToProps = () => {
+  return {};
 };
 
 const mapDispatchToProps = (dispatch) => {
-  return {
-    getNewQuote: (event) => {
-      event.preventDefault();
-      dispatch(getQuote());
-    },
-  };
+  return {};
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
